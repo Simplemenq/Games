@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class BasketballScoreProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int teamAScore = 0;
+        int teamBScore = 0;
+
+        System.out.println("Basketball Score Program");
+
+        while (true) {
+            System.out.println("Select an option:");
+            System.out.println("1. Team A scores");
+            System.out.println("2. Team B scores");
+            System.out.println("3. Quit");
+
+            int option = scanner.nextInt();
+
+            switch (option) {
+                case 1:
+                    teamAScore += 2; // You can customize the scoring system
+                    break;
+                case 2:
+                    teamBScore += 2; // You can customize the scoring system
+                    break;
+                case 3:
+                    System.out.println("Game Over");
+                    System.out.println("Final Scores:");
+                    System.out.println("Team A: " + teamAScore);
+                    System.out.println("Team B: " + teamBScore);
+                    return;
+                default:
+                    System.out.println("Invalid option. Please choose again.");
+            }
+
+            System.out.println("Current Scores:");
+            System.out.println("Team A: " + teamAScore);
+            System.out.println("Team B: " + teamBScore);
+        }
+    }
+}
